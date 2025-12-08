@@ -113,6 +113,25 @@ function createSnowflakes() {
         container.appendChild(flake);
     }
 }
+
+const closeButtons = document.querySelectorAll('.btn-close-lyrics');
+
+closeButtons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        // 1. Znajdź najbliższy element nadrzędny <details>
+        const detailsElement = button.closest('details');
+        
+        if (detailsElement) {
+            // 2. Zamknij go (usuwając atrybut open)
+            detailsElement.removeAttribute('open');
+            
+            // 3. (Opcjonalnie) Przewiń płynnie ekran do nagłówka tej kolędy, 
+            // aby użytkownik nie zgubił się na stronie po zamknięciu
+            detailsElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    });
+});
 document.addEventListener('DOMContentLoaded', createSnowflakes);
 // Pierwsza próba żądania blokady po załadowaniu strony
 requestWakeLock();
+

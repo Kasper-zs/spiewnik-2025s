@@ -214,3 +214,41 @@ footer {
     border: 1px solid rgba(26, 71, 42, 0.5);
     font-family: var(--font-body);
 }
+
+/* --- PRZYCISK ZWIJANIA --- */
+.collapse-section {
+    margin-top: 30px;
+    padding-top: 20px;
+    text-align: center;
+    border-top: 1px dashed rgba(255, 200, 87, 0.3); /* Delikatna linia oddzielająca */
+}
+
+.btn-close-lyrics {
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px; /* Odstęp między ikoną a tekstem */
+}
+
+.btn-close-lyrics .icon {
+    font-size: 0.8em;
+    transition: transform 0.3s ease;
+}
+
+.btn-close-lyrics:hover, 
+.btn-close-lyrics:active {
+    background: rgba(255, 200, 87, 0.15);
+    box-shadow: 0 0 15px rgba(255, 200, 87, 0.3);
+}
+
+.btn-close-lyrics:hover .icon {
+    transform: translateY(-3px); /* Ikona lekko podskakuje przy najechaniu */
+}
