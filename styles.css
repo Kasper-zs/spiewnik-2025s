@@ -4,7 +4,7 @@
     --xmas-red: #8a1c1c;
     --gold: #ffc857;
     --text-white: #f0f0f0;
-    
+    --bright-red: #ff6b6b;
     --font-script: 'Great Vibes', cursive;
     --font-heading: 'Poppins', sans-serif;
     --font-body: 'Montserrat', sans-serif;
@@ -189,6 +189,11 @@ details[open] summary::after {
     text-shadow: 0 0 20px rgba(255, 200, 87, 0.2);
 }
 
+.lyrics b.x2 {
+    color: var(--bright-red);
+    text-shadow: 0 0 12px rgba(255, 107, 107, 0.4); 
+}
+
 @keyframes textGlow {
     from { opacity: 0; transform: translateY(5px); }
     to { opacity: 1; transform: translateY(0); }
@@ -252,3 +257,4 @@ footer {
 .btn-close-lyrics:hover .icon {
     transform: translateY(-3px); /* Ikona lekko podskakuje przy najechaniu */
 }
+
